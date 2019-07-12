@@ -1,0 +1,33 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00000000524db2d6, pid=2356, tid=10192
+#
+# JRE version: Java(TM) SE Runtime Environment (9.0+11) (build 9.0.4+11)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (9.0.4+11, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x60b2d6]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=49587 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.jmx.enabled=true -Dspring.application.admin.enabled=true -Xverify:none -XX:TieredStopAtLevel=1 -Dfile.encoding=UTF-8 com.javainuse.SpringBootHelloWorldApplication --spring.output.ansi.enabled=always
+
+Host: Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz, 4 cores, 7G,  Windows 8.1 , 64 bit Build 9600 (6.3.9600.19358)
+Time: Fri Jul 12 09:02:17 2019 India Standard Time elapsed time: 107 seconds (0d 0h 1m 47s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000d0fdc5d000):  WatcherThread [stack: 0x000000d0ff020000,0x000000d0ff120000] [id=10192]
+
+Stack: [0x000000d0ff020000,0x000000d0ff120000],  sp=0x000000d0ff11f800,  free space=1022k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x60b2d6]
+V  [jvm.dll+0x64833d]
+V  [jvm.dll+0x66a936]
+V  [jvm.dll+0x586490]
