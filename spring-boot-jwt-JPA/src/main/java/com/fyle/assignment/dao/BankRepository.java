@@ -26,8 +26,10 @@ public interface BankRepository extends JpaRepository<Bank, Long> {
     @Query("select Bank from #{#entityName} Bank where ifsc=?1")
     public Bank getFetchBankDetailsByIFSC(String ifsc);
 
-    @Query(nativeQuery = true, value = "select * from  Bank where bank_name=?1 and address->>'city'=?2")
+    @Query(nativeQuery = true, value = "select * from  Bank where bank_name=?1 and address->>'city'=?2 limit ?3 offset ?4")
    // @Query("select Bank from #{#entityName} Bank where bankName=?1 and address->>'city' = ?2")
-    public List<Bank> getBankDetailsByTwoParam(String bankName, String city);
+    public List<Bank> getBankDetailsByTwoParam(String bankName, String city, Long limit, Long offset);
+
+    
 
 }
